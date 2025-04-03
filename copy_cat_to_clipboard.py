@@ -10,7 +10,7 @@ def send_to_clipboard(clip_type, data):
     clip.SetClipboardData(clip_type, data)
     clip.CloseClipboard()
 
-api_key = 'live_HfIv8G0DV3Drm1XBvFKucJmxlxq1GNRQ6U5XU28CeWKCMtnhQ4ZeaIzglJKChP2j'
+api_key = 'CAT_PHOTO_API_KEY'
 image_request = url_req.Request('https://api.thecatapi.com/v1/images/search',headers={'x-api-key':api_key})
 getRandomCat = json.loads(url_req.urlopen(image_request).read())[0]['url']
 cat_request = url_req.Request(getRandomCat,headers={"User-Agent": "Mozilla/5.0"})
